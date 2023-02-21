@@ -1,15 +1,20 @@
 import './App.css';
+import {BrowserRouter, Routes, Route} from "react-router-dom"
 import Footer from './components/footer/Footer';
-import Navbar from './components/navbar/Navbar';
 import Navber from './components/navber/Navber';
+import WhatsApp from './components/WhatsApp';
 import Home from './pages/home/Home';
 
 function App() {
   return (
     <div className="App">
-      {/* <Navbar/> */}
+      <BrowserRouter>
       <Navber/>
-      <Home/>
+      <Routes>
+        <Route path='/' element={<Home/>}></Route>
+      </Routes>
+      </BrowserRouter>
+      <WhatsApp/>
       <Footer/>
     </div>
   );
